@@ -15,22 +15,16 @@ window.addEventListener('load', () => {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
-                const temp = data.currentConditions.temp;
-                const humidity = data.currentConditions.humidity;
-                const cloudCover = data.currentConditions.cloudcover;
-                const descr = data.description;
+                const {temp, humidity, cloudcover } = data.currentConditions;
+                const description = data.description;
                 const timezone = data.timezone;
-                console.log(descr);
-                console.log(timezone);
-                console.log(temp);
 
                 content.innerHTML = `
                 <div class="card mx-auto mt-5" style="width: 18rem;">
                 <div class="card-body justify-content-center">
                     <h5 class="card-title">${timezone}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Temperature of ${temp}&#8457; with a cloud cover of ${cloudCover}% and a humidity of ${humidity}%.</h6>
-                    <p class="card-text ">Weather conditions are described as: "${descr}"</p>
+                    <h6 class="card-subtitle mb-2 text-muted">Temperature of ${temp}&#8457; with a cloud cover of ${cloudcover}% and a humidity of ${humidity}%.</h6>
+                    <p class="card-text ">Weather conditions are described as: "${description}"</p>
                     
                 </div>
             </div>
