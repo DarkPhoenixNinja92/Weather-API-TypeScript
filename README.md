@@ -1,1 +1,1 @@
-This is a weather report app I built a while back to interact with an api in order to fetch local weather data. If you want to see a live preview of the site then click [here](https://darkphoenixninja92.github.io/Weather-API-Web-App/).
+This is a weather report app I built a while back to interact with an api in order to fetch local weather data. If you want to see a live preview of the site then click [here](https://ShaunPour.github.io/Weather-API-Web-App/).
